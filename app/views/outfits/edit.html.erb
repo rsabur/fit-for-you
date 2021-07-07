@@ -1,0 +1,15 @@
+<h1>Edit your fit</h1>
+
+<%= form_for @outfit do |f| %>
+    <p><strong><%= f.label "Name:" %>
+    <%= f.text_field :name %></p>
+    <p><strong><%= f.label "Choose a Top: " %>
+    <%= f.collection_select :clothing_ids, @shirts, :id, :name %></p>
+    <p><strong><%= f.label "Choose a Bottom: " %>
+    <%= f.collection_select :clothing_ids, @pants, :id, :name %></p>
+    <p><strong><%= f.label "Choose an Accessory: " %>
+    <%= f.collection_select :clothing_ids, @accessories, :id, :name %></p>
+    <p><strong><%= f.label "Choose a Shoe: " %>
+    <%= f.collection_select :clothing_ids, @shoes, :id, :name %></p>
+    <%= f.submit %>
+<% end %>

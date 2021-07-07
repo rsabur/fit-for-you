@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FitForYou</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class='banner-image'>
+      <div class='banner-overlay'>
+        <%= image_tag 'logo.png', class: 'ffy_logo' %>
+      </div>
+    </div>
+  <nav>
+    <div class='right'>
+      <% if @current_user %>
+        <%= link_to "Welcome #{@current_user.name}!", @current_user  %>
+        <%= button_to "Logout", logout_path, method: :delete  %>
+      <% else %>
+        <%= link_to 'Sign up', new_user_path %> <a>|<a>
+        <%= link_to 'Login', new_login_path %>
+      <% end %>
+
+    </div>
+  </nav>
+    
+    <%= yield %>
+  </body>
+</html>

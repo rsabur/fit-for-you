@@ -1,0 +1,41 @@
+
+<div class="welcome-card">
+<div class="welcome"> 
+<h1>Create an Account</h1>
+</div>
+<div class='form-input'>
+<%= form_for @user do |f|%>
+<%= f.label "Name: "%>
+<%= f.text_field :name%>
+</div>
+
+<div class='form-input'>
+<%= f.label "Gender: "%>
+<%= f.text_field :gender %>
+</div>
+
+<div class='form-input'>
+<%= f.label "Profile Pic: "%>
+<%= f.file_field :avatar%>
+<div>
+
+<div class='form-input'>
+<%= f.label "Email Address: "%>
+<%= f.text_field :email%>
+</div>
+
+<div class='form-input'>
+<%= f.label "Password: "%>
+<%= f.password_field :password%>
+</div>
+
+<%= f.submit "Done" %>
+<%end%>
+
+<% if flash[:messages] %>
+    <% flash[:messages].each do |message|%>
+      <p style="color: red;"><%= message %>
+    <% end %>
+<% end %>
+
+</div>

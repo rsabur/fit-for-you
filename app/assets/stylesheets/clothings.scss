@@ -1,0 +1,75 @@
+// Place all the styles related to the clothings controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// .clothing-container {
+//     display: flexbox;
+//     flex-flow: column wrap;
+//     flex-flow: column wrap;
+//     justify-content: space-evenly;
+//     align-content: flex-start;
+//   }
+
+// .clothing-parent {
+//     display: grid;
+//     grid-template-columns: 0.5fr repeat(4, 1fr);
+//     grid-template-rows: repeat(5, 1fr);
+//     grid-column-gap: 0px;
+//     grid-row-gap: 0px;
+//     margin-left: 3%;
+//     margin-right: 3%;
+//     // background-color: white;
+//   }
+  
+//   .div9 { 
+//     background-color: rgba(89, 4, 30, 0.9);
+//     margin-left: auto;
+//     align-items: left;
+//     grid-area: 1 / 1 / 6 / 2; 
+//   }
+//   .div10 { 
+//     margin: 0;
+//     align-items: center;
+//     text-align: center;
+//     grid-area: 1 / 2 / 2 / 6; 
+//     background-color: white;
+//     margin-bottom: auto;
+//   }
+//   .div11 { 
+//     align-items: center;
+//     grid-area: 2 / 2 / 6 / 6;
+//     background-color: white;
+//     position: relative;
+//     top: -838px;
+//   }
+
+  div.clothing-card {
+    flex-grow: 4;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 27px 0px;
+    margin-left: 90px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: 10px -10px #59041e;
+    max-width: 20%;
+  }
+  div.clothing-card img {
+    max-width: 100px;
+    max-height: 95px;
+    border-radius: 20px;
+  }
+
+//   .div5s { 
+//     margin-left: 20px;
+//     align-items: center;
+//     grid-area: 5 / 1 / 6 / 2; 
+//   }
+
+div.clothing-card ul a {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+}

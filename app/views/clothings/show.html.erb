@@ -1,0 +1,47 @@
+<div class="container"> 
+    <div class="parent">
+        <div class="div1">
+            <ul id="navbar">
+                <li><a><%= link_to "My Closet", closets_path(@current_user) %></a></li>
+                <li><a><%= link_to "Go Shopping", clothings_path %></a></li>
+            </ul>
+        </div>
+
+
+        <div class="div7">
+            <h2 class="closet"><%= @clothing.name%></h2>
+            <hr>
+        </div>
+
+<div class="div3">
+    <div class="card">
+        <%= image_tag @clothing.img_url %>
+    </div>
+</div>
+
+<div class="div4">
+    <div class="card">
+        <h3><%= @clothing.description%></h3>
+        <hr>
+        <h3><%= @clothing.category%></h3>
+        <hr>
+        <h3><%= @clothing.gender %></h3>
+    </div>
+</div>
+
+<div class="div5">
+<%# if @current_user.logged_in? %>
+<% if @current_user.clothings.find_by(id: @clothing.id)  %>
+    <strong><p>You Own This!</p></strong>
+    <% else %>
+    <%# have a form that sends back user_id & clothing_id %>
+    <%# sends to coleset controler and create  %>
+    <%= form_tag '/closets' do %>
+        <%= hidden_field_tag  :user_id, @current_user.id %>
+        <%= hidden_field_tag :clothing_id, @clothing.id %>
+        <%= submit_tag "Add to Closet" %>
+    <% end %>
+<% end %>
+
+
+

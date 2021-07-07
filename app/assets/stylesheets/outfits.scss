@@ -1,0 +1,19 @@
+// Place all the styles related to the outfits controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+   
+
+    div.outfit-card {
+        border: 1px solid black;
+        padding: 15px;
+        margin: 10px 0px;
+        margin-left: 40px;
+        text-align: center;
+        margin-block-start: -9.33em;
+        margin-block-end: 1.7em;
+        font-weight: bold;
+        font-size: 23px;
+        border-radius: 5px;
+        box-shadow: 10px -10px rgba(89, 4, 30, 0.9);
+        width: 80%;
+      }

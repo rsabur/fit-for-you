@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="parent">
+    <div class="div1">
+        <ul id="navbar">
+            <li><a><%= link_to "My Profile", user_path(@current_user) %></a></li>
+            <li><a><%= link_to "My Closet", closets_path %></a></li>
+            <li><a><%= link_to "Add Clothing to this Fit", new_outfit_clothing_path(@outfit.id) %></a></li>
+        </ul>
+    </div>
+
+
+    <div class="div7">
+        <h1 class="closet">Outfit <%= @outfit.name %></h1>
+        <hr>
+    </div>
+
+<div class="div8">
+      <div class="outfit-card">
+<% @outfit.outfit_clothings.map do |outfit| %>
+    <p><%= outfit.clothing.category %> : <%= image_tag outfit.clothing.img_url %></p>
+<% end %>
+</div>
+    </div>
+
+
+<div class="div5">
+      <a class="delete"><%= button_to "Delete This Fit?", user_path(@current_user), method: :delete %></a>
+    </div>
+</div>

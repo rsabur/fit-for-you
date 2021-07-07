@@ -1,0 +1,8 @@
+<h1>Outfit Index Page</h1>
+
+<% @outfits.each do |outfit|%>
+<li><%= link_to outfit.name, outfit_path(outfit)%></li>
+<% end %>
+
+<p><%= link_to "Create a New Fit", new_outfit_path %>
+<%# link_to "See the Outfits by Category", outfits_path(:sort =>'Category') %>

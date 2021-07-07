@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="parent">
+    <div class="div1">
+      <ul id="navbar">
+        <li><a><%= link_to "My Closet", closets_path %></a></li>
+        <li><a><%= link_to "My Profile", user_path(@current_user) %></a></li>
+      </ul>
+    </div>
+
+    <div class="div7">
+        <h1 class="closet">All Clothes</h1>
+        <hr>
+    </div>
+
+    <div class="div8">
+        <% @clothings.each do |clothing|%>
+            <div class="clothing-card">
+              <%= image_tag clothing.img_url %>
+              <ul><a><%= link_to clothing.name, clothing_path(clothing)%><a></ul>
+              </div>
+          <% end %>
+    </div>  
+
+<%# link_to "See the Outfits by Gender", clothings_path(:sort =>'gender') %>

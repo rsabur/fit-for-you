@@ -1,0 +1,11 @@
+
+
+<head>
+    <title>All Users</title>
+</head>
+
+<% @users.each do |user|%>
+<li><%= link_to user.name, user_path(user)%>
+<%end%>
+
+

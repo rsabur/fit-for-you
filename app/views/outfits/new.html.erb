@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="parent">
+    <div class="div1">
+      <ul id="navbar">
+        <li><a><%= link_to "Go Shopping", clothings_path %></a></li>
+        <li><a><%= link_to "Go Back", user_path(@current_user) %></a></li>
+      </ul>
+    </div>
+
+    <div class="div7">
+        <h1 class="closet">Let's Put Together A New Fit</h1>
+        <hr>
+    </div>
+
+    <div class="div8">
+        <div class="closet-card">
+            <%= form_for @outfit do |f| %>
+                <%= f.hidden_field :user_id, value: @current_user.id %></p>
+                <p><strong><%= f.label "Name:" %>
+                <%= f.text_field :name %></p>
+                <%= f.submit "Save"%>
+            <% end %>
+        </div>
+    </div>  
+</div>
+<%# link_to "Go Back", outfits_path %>

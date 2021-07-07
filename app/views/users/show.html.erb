@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="parent">
+    <div class="div1">
+      <ul id="navbar">
+        <li><a><%= link_to "My Closet", closets_path %></a></li>
+        <li><a><%= link_to "Go Shopping", clothings_path %></a></li>
+        <li><a><%= link_to "Create a New Fit", new_outfit_path %></a></li>
+        <li><a><%= link_to "Edit Profile", edit_user_path %></a></li>
+      </ul>
+    </div>
+  
+    <div class="div5">
+      <a class="delete"><%= button_to "Delete Your Profile?", user_path(@user), method: :delete %></a>
+    </div>
+
+    <div class="div2">
+      <h1 class="profile">My Profile</h1>
+      <hr>
+      <% if flash[:messages]%>
+      <%= flash[:messages] %>
+      <% end %>
+    </div>
+    <div class="div3">
+      <div class="card">
+        <% if @user.avatar.attached? %>
+          <img src="<%= (url_for(@user.avatar)) %>" alt="<%= @user.name %>" width="500" height="400">
+        <% end %>
+        <hr>
+        <a><%= @user.name%></a>
+        </div>
+    </div>
+
+    <div class="div4">
+      <div class="card">
+        <h3 class="outfit">My Outfits</h3>
+          <% @user.outfits.each do |outfit| %>
+          <p><%= link_to outfit.name, outfit_path(outfit) %></p>
+          <hr>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,119 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.parent {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 0.25fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.div1 { 
+  background-color: rgba(89, 4, 30, 0.9);
+  margin-left: auto;
+  align-items: left;
+  grid-area: 1 / 1 / 6 / 2; 
+}
+.div2 { 
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  grid-area: 1 / 2 / 2 / 6; 
+  background-color: white;
+}
+.div3 { 
+  align-items: center;
+  grid-area: 2 / 2 / 6 / 4; 
+  background-color: white;
+}
+.div4 { 
+  align-items: center;
+  grid-area: 2 / 4 / 6 / 6; 
+  background-color: white;
+}
+
+.div5 { 
+  margin-left: 8px;
+  align-items: center;
+  grid-area: 5 / 1 / 6 / 2; 
+}
+
+.container {
+  display: flex;
+    flex-direction: row ;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    width: 150px;
+    // background-color: rgba(89, 4, 30, 0.9);
+    height: 175px;
+}
+  
+ul#navbar li a {
+  text-align: center;
+  display: block;
+  color: rgba(255, 180, 0, 0.6);
+  padding: 8px 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+  
+ul#navbar li a:hover,
+ul#navbar li a:focus {
+  // background-color: gainsboro;
+  // color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+  
+
+.delete {
+  // background-color: black;
+  margin: auto;
+  border-radius: 5px;
+}
+
+.div2 {
+  display: block;
+}
+
+div.card {
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px 0px;
+  margin-left: 40px;
+  text-align: center;
+  font-weight: normal;
+  font-size: larger;
+  border-radius: 5px;
+  box-shadow: 10px -10px rgba(89, 4, 30, 0.9);
+  width: 80%;
+}
+
+img {
+  max-width: 296px;
+  max-height: 290px;
+  border-radius: 100px;
+}
+
+h1.profile {
+  margin-block-start: -0.33em;
+  color:black;
+  font-weight: normal;
+}
+
+h3.outfit {
+  color:black;
+  font-weight: normal;
+}
+

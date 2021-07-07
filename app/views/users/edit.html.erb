@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="parent">
+    <div class="div1">
+      <ul id="navbar"> 
+        <li><a><%= link_to "Go Back", user_path(@current_user) %></a></li>
+      </ul>
+    </div>
+    
+    <div class="div7">
+        <h1 class="closet"> Edit Your Profile</h1>
+    </div>
+
+    <div class="div8">
+        <div class="closet-card">
+            <%= form_for @user do |f|%>
+                <%= f.label "Name: "%>
+                <%= f.text_field :name%>
+                <br>
+                <%= f.label "Gender: "%>
+                <%= f.text_field :gender %>
+                <br>
+                <%= f.label "Profile Pic: "%>
+                <%= f.file_field :avatar%>
+                <br>
+                <%= f.label "Email Address: "%>
+                <%= f.text_field :email%>
+                <br>
+                <br>
+                <%= f.submit "Save" %>
+            <%end%>
+        </div>
+    </div>  
+</div>
